@@ -1,0 +1,99 @@
+
+/* Use scalable font sizes with rems */
+:root{
+  font-size: 100%;
+  --accent: #1a73e8;
+  --muted: #666;
+}
+
+/* Basic scaling */
+body {
+  font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #ededed;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+/* Top bar */
+.top-bar {
+  background: #f7f7f7;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.top-bar a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Headshot styling (responsive and maintains aspect ratio) */
+.headshot {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin: 0 auto;
+}
+
+/* Project image styling (responsive and rounded courners) */
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+/* Gallery image */
+.gallery-image {
+  display: inline-block;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Layout spacing */
+.grid-container {
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+/* Headings */
+h1 { font-size: 2rem; 
+    margin-bottom: 0.5rem;
+    font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+}
+h2 { font-size: 1.375rem; 
+    margin-top: 1rem;
+    font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+}
+h3 { font-size: 1.125rem;
+    font-family: "Comic Sans MS", Helvetica, Arial, sans-serif;
+}
+
+/* Smaller screen spacing */
+@media screen and (max-width: 640px) {
+  h1 { font-size: 1.5rem; }
+  .top-bar { padding: 0.5rem; }
+}
+
+/* Footer */
+footer { margin-top: 2rem; padding: 1rem 0; border-top: 1px solid #eee; color: var(--muted); text-align: center; }
+
+/* Links  */
+a[target="_blank"]::after {
+  content: " ";
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Makes a focus on buttons */
+a:focus, button:focus {
+  outline: 3px solid rgba(26,115,232,0.175);
+  outline-offset: 3px;
+}
